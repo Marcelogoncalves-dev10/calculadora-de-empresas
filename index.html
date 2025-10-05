@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Lucro Líquido - Vendas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <h1>Calculadora de Lucro Líquido</h1>
+            <p class="subtitle">Adicione suas vendas e acompanhe o lucro total da sua empresa</p>
+        </header>
+
+        <!-- Seção para adicionar nova venda -->
+        <section class="add-sale-section">
+            <h2>Adicionar Nova Venda</h2>
+            <form id="saleForm" class="sale-form">
+                <div class="input-group">
+                    <label for="saleValue">Valor da Venda (R$):</label>
+                    <input type="number" id="saleValue" step="0.01" placeholder="Ex: 1000.00" required>
+                </div>
+                <div class="input-group">
+                    <label for="feeValue">Taxa Cobrada (R$):</label>
+                    <input type="number" id="feeValue" step="0.01" placeholder="Ex: 50.00" required>
+                </div>
+                <div class="input-group">
+                    <label for="costValue">Custo da Compra (R$):</label>
+                    <input type="number" id="costValue" step="0.01" placeholder="Ex: 700.00" required>
+                </div>
+                <button type="submit" class="add-button">Adicionar Venda</button>
+            </form>
+        </section>
+
+        <!-- Seção de resultados: lista de vendas e total -->
+        <section class="results-section">
+            <h2>Vendas Registradas</h2>
+            <div id="salesList" class="sales-list">
+                <!-- As vendas serão adicionadas aqui via JavaScript -->
+            </div>
+            <div id="totalProfit" class="total-profit">
+                <!-- O lucro total será exibido aqui via JavaScript -->
+            </div>
+            <button id="clearAll" class="clear-button">Limpar Todas as Vendas</button>
+        </section>
+    </div>
+
+    <!-- Link para o script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
